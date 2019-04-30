@@ -26,7 +26,7 @@ public class App {
     public static void main(String[] args) throws IOException, TemplateException, ParseException, InterruptedException {
         Logger logger= Logger.getLogger("");
         TableDao td=new TableDao();
-        td.loadTables();
+        td.loadTables("account");
         logger.info("数据库加载完成");
         ModelService ms=new ModelServiceImpl();
         DaoService ds=new DaoServiceImpl();
