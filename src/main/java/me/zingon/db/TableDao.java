@@ -36,8 +36,13 @@ public class TableDao {
 	
 	//根据表名生成
 	public void loadTables(String table) {
+		try {
 		Maps.put(table, loadFields(table));
+		}catch(Exception e){
+			
+		}
 	}
+
 
 	public List<Field> loadFields(String table) {
 		String sql = "show full columns from `" + table + "`;";
